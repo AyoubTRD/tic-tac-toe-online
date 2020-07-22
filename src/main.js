@@ -1,12 +1,32 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+import Notifications from "vue-notification";
+
+Vue.use(Notifications);
+
+import store from "./store";
+
+import VueSocketIO from "vue-socket.io";
+import SocketIO from "socket.io-client";
+
+Vue.use(
+  new VueSocketIO({
+    debug: true,
+    connection: "http://localhost:3000",
+    vuex: {
+      store,
+      actionPrefix: "socket_",
+      mutationPrefix: "socket_",
+    },
+  })
+);
 
 new Vue({
   router,
   store,
-  render: h => h(App)
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");
