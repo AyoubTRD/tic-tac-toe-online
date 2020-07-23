@@ -18,7 +18,7 @@ import SocketIO from "socket.io-client";
 Vue.use(
   new VueSocketIO({
     debug: !PROD,
-    connection: PROD ? "http://trd-tic-tac-toe.herokuapp.com" : "http://localhost:3000",
+    connection: PROD ? "https://trd-tic-tac-toe.herokuapp.com" : "http://localhost:3000",
     vuex: {
       store,
       actionPrefix: "socket_",
