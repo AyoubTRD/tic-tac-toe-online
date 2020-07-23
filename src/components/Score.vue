@@ -19,6 +19,7 @@
 .score {
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 .score div {
   text-align: center;

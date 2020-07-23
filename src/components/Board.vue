@@ -27,5 +27,7 @@ export default {
   grid-template-rows: 1fr 1fr 1fr;
   width: 300px;
   height: 300px;
+  margin: 0 auto;
+  margin-bottom: 25px;
 }
 </style>

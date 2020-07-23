@@ -18,7 +18,7 @@
             <img :src="player.avatar" :alt="player.name + '\'s avatar'" />
             <span>
               {{ player.name }}
-              <span class="extra yellow">is playing with l'oeuf</span>
+              <span class="extra yellow" v-if="player.is_playing">is playing with {{ player.opponent.name }}</span>
             </span>
           </div>
         </div>

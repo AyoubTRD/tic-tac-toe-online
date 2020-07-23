@@ -5,7 +5,8 @@
   "scripts": {
     "serve:client": "vue-cli-service serve",
     "serve:server": "cd server && nodemon index.js",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "start": "node server/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",

@@ -2,7 +2,9 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 
-Vue.config.productionTip = false;
+const PROD = true
+
+Vue.config.productionTip = PROD;
 
 import Notifications from "vue-notification";
 
@@ -15,8 +17,8 @@ import SocketIO from "socket.io-client";
 
 Vue.use(
   new VueSocketIO({
-    debug: true,
-    connection: "http://localhost:3000",
+    debug: !PROD,
+    connection: PROD ? "http://trd-tic-tac-toe.herokuapp.com" : "http://localhost:3000",
     vuex: {
       store,
       actionPrefix: "socket_",

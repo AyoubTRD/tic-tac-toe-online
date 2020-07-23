@@ -6,9 +6,7 @@
         <Game />
         <Score />
       </div>
-      <div class="chat">
-        <Chat />
-      </div>
+      <Chat />
     </div>
   </div>
 </template>
@@ -40,11 +38,32 @@ export default {
 .grid {
   display: flex;
   justify-content: space-between;
-}
-.chat {
-  width: 30%;
+  flex-wrap: wrap;
 }
 .game {
-  width: 64%;
+  width: 50%;
+  text-align: center;
+  padding: 25px;
+}
+.container {
+  height: 600px;
+}
+
+@media all and (max-width: 710px) {
+  .chat {
+    width: 100% !important;
+  }
+  .container {
+    height: 900px;
+  }
+  .game {
+    width: 100%;
+  }
+  .game {
+    height: 55%;
+  }
+  .chat {
+    height: 45%;
+  }
 }
 </style>

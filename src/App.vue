@@ -124,6 +124,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   min-height: 100vh;
+  padding-bottom: 30px;
 }
 body::after {
   content: "";

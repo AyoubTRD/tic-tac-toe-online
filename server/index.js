@@ -52,6 +52,7 @@ io.on("connect", async (socket) => {
     }
     name = userName;
     socket.data.name = name;
+    socket.data.avatar = `https://avatars.dicebear.com/api/avataaars/${name}.svg`
     sockets[name] = socket;
     io.emit("users", getUsersData());
     socket.emit("self", getUserData(socket));
@@ -124,7 +125,7 @@ io.on("connect", async (socket) => {
 
   socket.on("send_message", (message) => {
     if (!socket.room) return;
-    socket.room.messages.push({
+    socket.room.messages.unshift({
       message,
       createdAt: new Date(),
       from: name,

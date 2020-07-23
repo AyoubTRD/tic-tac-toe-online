@@ -62,6 +62,7 @@ class Match {
     this.O = this.X === this.players[0] ? this.players[1] : this.players[0];
     this.currentPlayer = this.X;
     this.board = [null, null, null, null, null, null, null, null, null];
+    this.status = {}
   }
 }
 

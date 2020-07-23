@@ -60,7 +60,7 @@ export default new Vuex.Store({
     socket_request_to_play(app, request) {
       Vue.notify({
         group: "request",
-        title: "L'oeuf",
+        title: "Request to play",
         text: `${request.userName} wants to play with you`,
         duration: -1,
         data: {
